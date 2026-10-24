@@ -151,3 +151,5 @@ Files are plain text. The only update process is **edit → save → upload/comm
 ## Using ChatGPT Work for publishing
 
 If Work mode is available in your ChatGPT account, choose **Work** from the mode selector and connect GitHub there. Ask Work to publish this **unzipped project** to your exact `<github-username>.github.io` repository. Connection and any account permissions require your explicit approval. Chat mode can prepare and test these files without publishing them to an account. A ZIP download alone is **not** an active public website.
+
+The financial preview now uses content-driven sizing; its sample-figures label sits beside the header, not over the totals.
