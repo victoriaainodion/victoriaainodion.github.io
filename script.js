@@ -104,7 +104,7 @@
       card.hidden = !show;
       if (show) visible += 1;
     });
-    if (workCount) workCount.textContent = visible + (visible === 1 ? ' demonstration' : ' demonstrations');
+    if (workCount) workCount.textContent = visible + (visible === 1 ? ' case study' : ' case studies');
   }));
 
   // Every project has the same clear evidence model: task, approach, sample output,
@@ -125,7 +125,7 @@
       output: 'A weekly view with clearly separated commitments, meeting preparation, review time and follow-up reminders.',
       value: 'An executive can see what is coming, what needs preparation and which follow-ups remain open.',
       tools: ['Google Calendar', 'Microsoft Excel'],
-      disclaimer: 'Fictional week, dates, activities and appointments. This is a demonstration of a scheduling method, not a client calendar.'
+      disclaimer: 'This schedule uses sample appointments and dates. No private client calendar entries are shown.'
     },
     meetings: {
       category: 'Executive support / Operations / Communication',
@@ -142,7 +142,7 @@
       output: 'An agenda, structured minutes and a follow-up register showing item, owner, due date and current status.',
       value: 'Makes it easier to know what was agreed, who is responsible and what still needs attention.',
       tools: ['Microsoft Word', 'Microsoft Excel', 'Google Docs'],
-      disclaimer: 'All actions, people and deadlines are fictional. No real Amaecom or client meeting notes are reproduced.'
+      disclaimer: 'Names, action items and deadlines are sample entries. No confidential employer or client meeting notes are shown.'
     },
     finance: {
       category: 'Operations / Reporting / Financial administration',
@@ -159,7 +159,7 @@
       output: 'A reconciliation table, a receipts checklist, a quotation-to-purchase comparison and a brief expenditure chart.',
       value: 'Makes differences visible without assuming that an undocumented item is automatically an improper expense.',
       tools: ['Microsoft Excel', 'Google Sheets', 'Microsoft Word'],
-      disclaimer: 'All amounts in this visual are entirely fictional and unrelated to any employer, transaction or construction project.',
+      disclaimer: 'Sample figures are used to protect confidential financial information. They are not actual transaction figures or verified employer results.',
       exampleTable: 'finance'
     },
     records: {
@@ -177,7 +177,7 @@
       output: 'An organised membership register and a review queue for unresolved or duplicate entries.',
       value: 'Provides a clearer record for administration and a reliable place to start when contacting members.',
       tools: ['Microsoft Excel', 'Google Sheets'],
-      disclaimer: 'The names and contact values are fictional. The demonstration does not display real membership records.'
+      disclaimer: 'Names and contact details are sample entries. No private membership records are displayed.'
     },
     travel: {
       category: 'Research / Travel / Virtual assistance',
@@ -194,7 +194,7 @@
       output: 'A side-by-side fare table and short executive note identifying the conditions that need confirmation.',
       value: 'Allows an executive to review comparable options without overlooking route details or unconfirmed charges.',
       tools: ['Google Sheets', 'Microsoft Excel', 'Online research'],
-      disclaimer: 'The three fares are invented for design purposes. They are not live or historic prices and are not booking offers.'
+      disclaimer: 'The fare amounts are examples for comparison only, not current quotations, historical fares or booking offers.'
     },
     inbox: {
       category: 'Executive support / Virtual assistance / Communication',
@@ -211,7 +211,7 @@
       output: 'A structured set of Gmail-style labels: Priority, Executive Review, Awaiting Response, Follow-up, Finance and Archived.',
       value: 'Creates a simple way to see pending decisions and find the information behind a request.',
       tools: ['Gmail', 'Google Workspace'],
-      disclaimer: 'All senders, subjects and messages are fictional. No actual email is shown.'
+      disclaimer: 'The sender names, subjects and messages are sample entries. No private emails are shown.'
     },
     tasks: {
       category: 'Operations / Virtual assistance',
@@ -228,7 +228,7 @@
       output: 'A Trello-style board or spreadsheet tracker with task, owner, deadline, current status and next action.',
       value: 'Makes hand-offs and waiting points easier to see and follow up.',
       tools: ['Trello', 'Microsoft Excel', 'Google Sheets'],
-      disclaimer: 'The board and tasks are fictional. It does not represent an employer’s actual internal workflow.'
+      disclaimer: 'The tasks, owners and deadlines are examples. This is a recreated layout, not a screenshot of an employer’s internal board.'
     },
     writing: {
       category: 'Executive support / Communication',
@@ -245,7 +245,7 @@
       output: 'A professional follow-up draft, business letter format or short internal announcement that can be reviewed before use.',
       value: 'Helps recipients understand the request and what response is expected.',
       tools: ['Microsoft Word', 'Gmail', 'Google Docs'],
-      disclaimer: 'The text shown is newly drafted fictional copy. It is not a real employer instruction, recipient correspondence or approved published post.'
+      disclaimer: 'This is a sample message drafted for the portfolio, not an employer instruction, private correspondence or an approved published post.'
     }
   };
 
@@ -267,14 +267,14 @@
       <h2 class="case-title" id="case-dialog-title">${escapeHtml(details.title)}</h2>
       <p class="case-lead">${escapeHtml(details.lead)}</p>
       <div class="case-preview-wrap" id="modal-visual"></div>
-      <p class="case-demo-note">ILLUSTRATIVE DEMONSTRATION — ${escapeHtml(details.disclaimer)}</p>
-      ${details.exampleTable === 'finance' ? `<div class="case-extra"><h3>Illustrative expenditure summary</h3><table class="example-table"><thead><tr><th scope="col">Description</th><th scope="col">Fictional amount (₦)</th></tr></thead><tbody><tr><td>Funds released</td><td>2,500,000</td></tr><tr><td>Reported expenditure</td><td>2,180,000</td></tr><tr><td>Expenditure with matched receipts</td><td>1,920,000</td></tr><tr><td>Reported expenditure awaiting receipt support</td><td>260,000</td></tr><tr><td>Funds released less reported expenditure</td><td>320,000</td></tr></tbody></table><p class="example-table-note">Illustrative arithmetic only. The reported spending exceeds receipt-supported spending by ₦260,000; this is a documentation gap, not evidence of misuse. Quotation item checks would be reviewed separately.</p></div>` : ''}
+      <p class="case-demo-note">ILLUSTRATIVE EXAMPLE — ${escapeHtml(details.disclaimer)}</p>
+      ${details.exampleTable === 'finance' ? `<div class="case-extra"><h3>Illustrative expenditure summary</h3><table class="example-table"><thead><tr><th scope="col">Description</th><th scope="col">Sample amount (₦)</th></tr></thead><tbody><tr><td>Funds released</td><td>2,500,000</td></tr><tr><td>Reported expenditure</td><td>2,180,000</td></tr><tr><td>Expenditure with matched receipts</td><td>1,920,000</td></tr><tr><td>Reported expenditure awaiting receipt support</td><td>260,000</td></tr><tr><td>Funds released less reported expenditure</td><td>320,000</td></tr></tbody></table><p class="example-table-note">Illustrative arithmetic only. The reported spending exceeds receipt-supported spending by ₦260,000; this is a documentation gap, not evidence of misuse. Quotation item checks would be reviewed separately.</p></div>` : ''}
       <div class="case-detail-grid">
         <div class="case-section"><h3>The administrative problem</h3><p>${escapeHtml(details.problem)}</p><h3>Example output</h3><p>${escapeHtml(details.output)}</p></div>
         <div class="case-section"><h3>Approach</h3><ul>${details.approach.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>
       </div>
       <div class="case-section"><h3>Practical value</h3><p>${escapeHtml(details.value)}</p></div>
-      <div class="case-tools"><span>TOOLS USED FOR THIS DEMONSTRATION</span><div class="case-tools-list">${details.tools.map((tool) => `<span>${escapeHtml(tool)}</span>`).join('')}</div></div>
+      <div class="case-tools"><span>RELEVANT TOOLS</span><div class="case-tools-list">${details.tools.map((tool) => `<span>${escapeHtml(tool)}</span>`).join('')}</div></div>
     `;
     const copy = preview.cloneNode(true);
     copy.removeAttribute('id');

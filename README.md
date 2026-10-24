@@ -6,7 +6,7 @@ A complete static career portfolio for an Executive Assistant, Virtual Assistant
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Complete website: homepage, About, services, eight fictional case-study demonstrations, a six-card gallery of submitted screenshots, experience, tools, two certificate images, education and contact |
+| `index.html` | Complete website: homepage, About, services, eight practical case studies with reconstructed visuals, a six-card gallery of submitted screenshots, experience, tools, two certificate images, education and contact |
 | `styles.css` | Responsive design, mobile layout, visual work samples and accessible focus styles |
 | `script.js` | Mobile menu, portfolio category filters, case-study pop-ups and personal asset loading |
 | `config.js` | **Edit this file first** to update your email, LinkedIn URL, phone number, headshot and CV file |
@@ -14,11 +14,11 @@ A complete static career portfolio for an Executive Assistant, Virtual Assistant
 | `assets/social-preview.png` | Sharing image for social link previews |
 | `.nojekyll` | Tells GitHub Pages to serve this static site without a Jekyll build |
 
-The eight case-study visuals are **illustrative demonstrations using fictional data**. They are not verified client screenshots or real client results. Below these is a separate gallery with **selected screenshots supplied by Victoria**: calendar booking, event reminders, a task board, expense reporting, an agenda, research and a spreadsheet chart. These show formatting and use of tools; no employer-specific outcomes are claimed. Private email inboxes, named contact lists and old live-price comparisons were excluded.
+The eight case studies describe relevant executive and administrative tasks drawn from Victoria's professional experience. Their on-page visuals are **recreated layouts using sample information**, not original employer documents. The expenditure graphic uses sample figures (₦2.50m released, ₦2.18m reported, ₦1.92m receipts matched and ₦260,000 awaiting receipt support), which must not be described as verified transaction amounts or employer outcomes. A separate gallery contains **selected screenshots supplied by Victoria**: calendar booking, event reminders, a task board, expense reporting, an agenda, research and a spreadsheet chart. These show examples of documents and tools without claiming audited employer results. Private inboxes, named contact lists and old live-price comparisons were excluded.
 
 The site includes **two uploaded virtual assistance certificate images**. It now includes Victoria's phone number, **+234 913 502 0887**, with her express approval and a working `tel:` link. The LinkedIn and email links are included. A **public-facing copy** of the supplied CV is bundled as `assets/victoria-ainodion-cv.pdf`, with the private client's name anonymised, the phone number normalised and unconfirmed additional certifications/tool claims omitted. Victoria's original uploaded CV has not been changed.
 
-No actual headshot was supplied, so the homepage still displays a clean `VA` placeholder. Do not use an AI-created person's face to represent Victoria.
+Victoria's submitted professional portrait is included at `assets/victoria-portrait.webp` and appears in the homepage hero. The visual palette uses warm coffee, cocoa-brown and cream tones.
 
 ## See the website on your own computer first
 
@@ -61,7 +61,7 @@ window.PORTFOLIO_CONFIG = {
   email: 'victoriaainodion@gmail.com',
   linkedin: 'https://www.linkedin.com/in/victoria-ainodion-va',
   phone: '+234 913 502 0887',
-  portraitFile: '',
+  portraitFile: './assets/victoria-portrait.webp',
   cvFile: './assets/victoria-ainodion-cv.pdf'
 };
 ```
@@ -72,7 +72,7 @@ window.PORTFOLIO_CONFIG = {
 - You can update the live file in GitHub by opening `config.js`, clicking the pencil **Edit** icon, saving the change and committing it to `main`.
 - Your number is intentionally public in this version because you requested it. To remove it, delete the phone link markup in `index.html` and the `phone` setting in `config.js`.
 
-## Add your genuine professional headshot
+## Change or replace your professional portrait
 
 1. Choose a professional picture that you own or have permission to publish.
 2. Ideally prepare it as a portrait-orientation WebP or JPG, around 1000–1600 pixels tall. Retain your natural appearance; the site only crops the image.
@@ -100,13 +100,13 @@ The gallery lives in `index.html` inside the `.evidence-block` with `id="samples
 
 Some examples are training exercises rather than verified paid-client deliverables. Keep that distinction clear. The original full screenshots of inboxes and contact lists are intentionally not part of this public ZIP.
 
-## Replace a demonstration with an approved work sample
+## Replace a case-study visual with an approved work sample
 
 1. Obtain permission to publish any genuine employer or client work. Remove names, personal data, confidential amounts, internal instructions and anything else private.
 2. Use a PNG, JPG or PDF sample, preferably under a descriptive filename in `assets/`.
 3. Edit the relevant project's visual inside `index.html` (each project begins with `<article class="work-card"` and has a `data-project` identifier such as `finance`). Replace or add an appropriate `<img src="./assets/your-sample.png" alt="...">` with descriptive alt text and responsive styles.
 4. Edit the matching case description in `script.js` inside the `cases` object, keeping the problem, approach, output, practical value and tools accurate.
-5. Replace **Sample demonstration** labels only if the new exhibit is genuinely your approved work and clearly described as such.
+5. Describe the origin of the exhibit accurately. Label an approved original screenshot as **Work sample**; label recreated examples as **Illustrative example** or **Sample figures**, as appropriate.
 6. Test locally and commit the changes to GitHub.
 
 The example projects are `calendar`, `meetings`, `finance`, `records`, `travel`, `inbox`, `tasks` and `writing`. Do not upload original membership lists, private correspondence or receipts merely to prove experience.
@@ -125,7 +125,7 @@ Files are plain text. The only update process is **edit → save → upload/comm
 
 - No testimonials, unsupported percentages, invented organisations or invented outcomes.
 - New York remote client is anonymised.
-- All project sample names, dates, amounts, fares and tasks are explicitly fictional.
+- Recreated visuals use clearly labelled sample names, dates, amounts, fares and tasks. These are examples, not disclosed private client records or verified historical figures.
 - Phone is included after Victoria explicitly authorised public display.
 - The separate public CV excludes the private client’s name and unconfirmed additional certifications and Canva/CapCut.
 - Certificates shown are photographed uploads. No training year was invented for the 49-day bootcamp.
